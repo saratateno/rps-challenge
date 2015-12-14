@@ -1,19 +1,38 @@
-<%= @game.player_1.name %>
+<html>
+<head>
+  <link rel="stylesheet" href="css/play.css" type="text/css">
+</head>
 
-<p>Make your choice</p>
+<body>
 
-<form action="/result" method="post">
-  <label for="Button for choose rock">
-    <input type="radio" name="weapon" value="rock" checked id="rock">Rock
-  </label>
-  <br>
-  <label for="Button for choose paper">
-    <input type="radio" name="weapon" value="paper" id="paper">Paper
-  </label>
-  <br>
-  <label for="Button for choose scissors">
-    <input type="radio" name="weapon" value="scissors" id="scissors">Scissors
-  </label>
-  <br>
-  <input type="submit" value="OK">
-</form>
+  <h1><%= @game.player_1.name %></h1>
+
+  <p>Make your choice</p>
+
+
+  <div class="row">
+    <form action="/result" method="post">
+      <label for="Button for choose rock">
+        <button type="submit" name="weapon" value="rock" id="rock">
+          <img src="http://www.sportsreception.com/wp-content/uploads/2015/09/therock-muscles.jpg" alt="The Rock">
+        </button>
+      </label>
+
+      <label for="Button for choose paper">
+        <button type="submit" name="weapon" value="paper" id="paper">
+          <img src="http://www.gelderlander.nl/polopoly_fs/1.4486557.1407853320!image/image-4486557.jpg" alt="Paper">
+        </button>
+      </label>
+
+      <label for="Button for choose scissors">
+        <button type="submit" name="weapon" value="scissors" id="scissors">
+          <img src="http://vignette2.wikia.nocookie.net/edwardscissorhands/images/d/df/Dedward.scissorhands/revision/latest?cb=20150927175723" alt="scissors">
+        </button>
+      </label>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
